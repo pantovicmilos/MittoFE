@@ -2,8 +2,9 @@
 
 - Configure API url in src\environments\environment.prod.ts
 
-steps to spin docker container:
+Steps to spin docker container:
 
+- Navigate to root folder
 - npm i
 - ng build --prod
 - docker image build -t mittofe .
