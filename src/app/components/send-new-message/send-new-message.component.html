@@ -1,0 +1,19 @@
+<div>
+  <kendo-textbox-container floatingLabel="From">
+    <input kendoTextBox [(ngModel)]="viewModel.from" name="from" />
+  </kendo-textbox-container>
+</div>
+
+<div>
+  <kendo-textbox-container floatingLabel="To">
+    <input kendoTextBox [(ngModel)]="viewModel.to" name="to" />
+  </kendo-textbox-container>
+</div>
+
+<div>
+  <kendo-textbox-container floatingLabel="Text">
+    <textarea kendoTextArea [(ngModel)]="viewModel.text" name="text"></textarea>
+  </kendo-textbox-container>
+</div>
+
+<button kendoButton (click)="sendSms()" [primary]="true">Send</button>

@@ -1,0 +1,23 @@
+<div>
+  <label>From</label>
+  <kendo-datepicker (valueChange)="filterDateFrom($event)" [value]="dateFrom" [format]="'yyyy-MM-dd'"></kendo-datepicker>
+</div>
+<div>
+  <label>To</label>
+  <kendo-datepicker (valueChange)="filterDateTo($event)" [value]="dateTo" [format]="'yyyy-MM-dd'"></kendo-datepicker>
+</div>
+<div>
+  <label>Mcc</label>
+  <kendo-multiselect
+    [data]="mccFilterValues"
+    (valueChange)="filterMcc($event)"
+  ></kendo-multiselect>
+</div>
+<div>
+  <kendo-grid [data]="gridData">
+    <kendo-grid-column
+      *ngFor="let col of columns"
+      [field]="col.field"
+    ></kendo-grid-column>
+  </kendo-grid>
+</div>

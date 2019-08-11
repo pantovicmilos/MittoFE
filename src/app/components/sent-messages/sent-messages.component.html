@@ -1,0 +1,21 @@
+<div>
+  <label>From</label>
+  <kendo-datepicker (valueChange)="dateFromChange($event)" [value]="dateFrom" [format]="'yyyy-MM-dd'"></kendo-datepicker>
+  <kendo-timepicker (valueChange)="timeFromChange($event)" [value]="timeFrom" [format]="'HH:mm:ss'"></kendo-timepicker>
+</div>
+<div>
+  <label>To</label>
+  <kendo-datepicker (valueChange)="dateToChange($event)" [value]="dateTo" [format]="'yyyy-MM-dd'"></kendo-datepicker>
+  <kendo-timepicker (valueChange)="timeToChange($event)" [value]="timeTo" [format]="'HH:mm:ss'"></kendo-timepicker>
+</div>
+<div>
+  <kendo-grid
+    *ngIf="this.gridView && this.gridView.data"
+    [data]="gridView"
+    [pageSize]="viewModel.take"
+    [skip]="viewModel.skip"
+    [pageable]="true"
+    (pageChange)="pageChange($event)"
+  >
+  </kendo-grid>
+</div>
